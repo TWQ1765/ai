@@ -11,6 +11,8 @@ int stringCompare(char *str1, char *str2);
 
 char *speakToAiMachine(char *msg);
 
+char *convertToUpper(char *msg);
 
+char * yourNameByMachine(char *name);
 
 #endif // _AI_H
