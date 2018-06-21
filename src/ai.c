@@ -30,8 +30,12 @@ int stringCompare(char *str1, char *str2){
 
 char *speakToAiMachine(char *msg){
 	
-	if (msg == toupper(msg))
-	
-	return "a";//NULL;
+	//if (msg == toupper(msg))
+	char * temp = "Hi there! My name is TheMachine. What is yours?";
+	char * reply = (char *)malloc(strlen(temp) + 1);
+	//reply = temp;
+	strcpy(reply,temp);
+	printf("reply : %s\n",reply);
+	return reply;//NULL;
 	
 }
