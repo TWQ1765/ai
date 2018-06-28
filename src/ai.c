@@ -77,3 +77,19 @@ char * yourNameByMachine(char *name){
 	printf("acknowledge: %s\n",acknowledge);
 	return acknowledge;
 }
+
+char * byeToAiMachine(char *bye){
+	char * temp = "Good bye. Have a nice day";
+	char * reply = (char *)malloc(strlen(temp));
+	strcpy(reply,temp);
+	if((stringCompare(bye ,"BYE"))==1){
+		return reply;
+	}	
+	else
+	{						
+		char * errorMsg = 	"error..........................................";	
+		return errorMsg;
+	}
+	
+	
+}

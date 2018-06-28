@@ -64,6 +64,18 @@ void test_yourNameByMachine_Given_TWQ_expect_Nice_to_meet_you_TWQ(void)
 	free(real);
 }
 
+void test_byeToAiMachine_Given_bye_expect_Good_bye_Have_a_nice_day(void)
+{
+  char *expectedReply = "Good bye. Have a nice day";
+  char *expected = "BYE";
+  char *real = convertToUpper("bye");
+  char *reply = byeToAiMachine("real");
+  TEST_ASSERT_EQUAL_STRING(expected, real);
+  TEST_ASSERT_EQUAL_STRING(expectedReply, reply);
+  
+  //free(reply);
+}
+
 //extral
 void test_convertToUpper_Given_hi_expect_HI(void)
 {

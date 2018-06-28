@@ -15,4 +15,6 @@ char *convertToUpper(char *msg);
 
 char * yourNameByMachine(char *name);
 
+char * byeToAiMachine(char *bye);
+
 #endif // _AI_H
