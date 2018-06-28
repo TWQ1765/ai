@@ -82,7 +82,8 @@ char * byeToAiMachine(char *bye){
 	char * temp = "Good bye. Have a nice day";
 	char * reply = (char *)malloc(strlen(temp));
 	strcpy(reply,temp);
-	if((stringCompare(bye ,"BYE"))==1){
+	if(((stringCompare(bye ,"BYE"))==1) || (stringCompare(bye ,"bye")==1))
+	{
 		return reply;
 	}	
 	else

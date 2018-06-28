@@ -73,7 +73,7 @@ void test_byeToAiMachine_Given_bye_expect_Good_bye_Have_a_nice_day(void)
   TEST_ASSERT_EQUAL_STRING(expected, real);
   TEST_ASSERT_EQUAL_STRING(expectedReply, reply);
   
-  //free(reply);
+  free(reply);
 }
 
 //extral
