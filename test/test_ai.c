@@ -67,10 +67,10 @@ void test_yourNameByMachine_Given_TWQ_expect_Nice_to_meet_you_TWQ(void)
 void test_byeToAiMachine_Given_bye_expect_Good_bye_Have_a_nice_day(void)
 {
   char *expectedReply = "Good bye. Have a nice day";
-  char *expected = "BYE";
-  char *real = convertToUpper("bye");
-  char *reply = byeToAiMachine("real");
-  TEST_ASSERT_EQUAL_STRING(expected, real);
+ 
+  //char *real = convertToUpper("bye"); // hmmmmm.............
+  char *reply = byeToAiMachine("BYE");
+ 
   TEST_ASSERT_EQUAL_STRING(expectedReply, reply);
   
   free(reply);
@@ -95,6 +95,13 @@ void test_convertToUpper_Given_NEVello_expect_NEVELLO(void)
 {
 	char *expected = "-ELLO";
 	char *real = convertToUpper("-ello");
+	TEST_ASSERT_EQUAL_STRING(expected, real);
+	free(real);
+}
+void test_convertToUpper_Given_bye_expect_BYE(void)
+{
+	char *expected = "BYE";
+	char *real = convertToUpper("bye");
 	TEST_ASSERT_EQUAL_STRING(expected, real);
 	free(real);
 }
