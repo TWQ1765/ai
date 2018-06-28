@@ -68,8 +68,11 @@ void test_byeToAiMachine_Given_bye_expect_Good_bye_Have_a_nice_day(void)
 {
   char *expectedReply = "Good bye. Have a nice day";
  
-  //char *real = convertToUpper("bye"); // hmmmmm.............
-  char *reply = byeToAiMachine("BYE");
+  char *real = convertToUpper("bye"); // hmmmmm.............try mallloc
+  char * strTemp = (char *)malloc(strlen(real));
+	strcpy(strTemp,real);
+  char *reply = byeToAiMachine(strTemp);
+  free(strTemp);
  
   TEST_ASSERT_EQUAL_STRING(expectedReply, reply);
   
